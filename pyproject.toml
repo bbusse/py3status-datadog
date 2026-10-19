@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py3status-datadog"
+version = "0.1.0"
+description = "A py3status module for querying Datadog metrics and monitors"
+readme = "README.md"
+license = "BSD-3-Clause"
+requires-python = ">=3.10"
+dependencies = ["datadog-api-client", "py3status"]
+
+[project.urls]
+Homepage = "https://github.com/bbusse/py3status-datadog"
+
+[project.entry-points.py3status]
+datadog = "py3status_datadog.datadog"
+
+[tool.setuptools]
+package-dir = { py3status_datadog = "src/py3status-datadog" }
+packages = ["py3status_datadog"]
